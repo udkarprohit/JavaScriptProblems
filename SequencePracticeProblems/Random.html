@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>
+        <title>Sequence Practice Problems</title>
+    </h1>
+</head>
+
+<body>
+    <center>
+        <h1>Sequence Practice Problems</h1>
+        <h1>
+            <input type='button' id='bt' value='Generate Number'onclick="document.getElementById('demo').innerHTML = generate_random(10)" />
+            <p>Random Numbers b/w 0 to 9 are as shown below </p>
+            <p id='demo'></p>
+        </h1>
+    </center>
+    <script>
+        function generate_random(limit) {
+            return random = Math.floor(Math.random() * limit)
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>
+        <title>Sequence Practice Problems</title>
+    </h1>
+</head>
+
+<body>
+    <center>
+        <h1>Sequence Practice Problems</h1>
+        <h1>
+            <input type='button' id='bt' value='Generate Number'onclick="document.getElementById('demo').innerHTML = generate_random(10)" />
+            <p>Random Numbers b/w 0 to 9 are as shown below </p>
+            <p id='demo'></p>
+        </h1>
+    </center>
+    <script>
+        function generate_random(limit) {
+            var random1 = 0, random2 = 0;
+            random1 = Math.floor(Math.random() * limit);
+            random2 = Math.floor(Math.random() * limit);
+            var num1 = 0;
+            // document.getElementById("Random one " + random1 + "Random 2 " + random2);
+            // console.log(random1)
+            // console.log(random2)
+            num1 = random1 + random2;
+            return num1;
+            
+        }
+    </script>
+
+</body>
+
+</html>
