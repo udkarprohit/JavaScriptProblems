@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Random Numbers Example</title>
+  </head>
+  <body>
+    <h1>Random Numbers Example</h1>
+    <p id="output"></p>
+    <script>
+      // Generate an array of 5 random 3-digit numbers
+      const numbers = [];
+      for (let i = 0; i < 5; i++) {
+        numbers.push(Math.floor(Math.random() * 900) + 100);
+      }
+
+      // Find the minimum and maximum values in the array
+      let min = numbers[0];
+      let max = numbers[0];
+      for (let i = 1; i < numbers.length; i++) {
+        if (numbers[i] < min) {
+          min = numbers[i];
+        }
+        if (numbers[i] > max) {
+          max = numbers[i];
+        }
+      }
+
+      // Output the results to the HTML page
+      const outputElement = document.getElementById("output");
+      outputElement.textContent = "The minimum value is " + min + " and the maximum value is " + max + ".";
+    </script>
+  </body>
+</html>
