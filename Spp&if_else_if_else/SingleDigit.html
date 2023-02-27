@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Numbers Example</title>
+</head>
+
+<body>
+    <center>
+        <h1>Year is a Leap Year or not a Leap Year.</h1>
+        <p id="output"></p>
+    </center>
+    <script>
+        // get the year from user input
+        const singleDigit = parseInt(prompt("Enter a Singe Digit : "));
+
+        // check if the year is a leap year
+        if (singleDigit === 1) {
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "A";
+        }else if(singleDigit === 2){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "B";
+        }else if(singleDigit === 3){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "C";
+        }else {
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Enter the vaild number";
+        }
+        // const outputElement = document.getElementById("output");
+        // outputElement.textContent = "The Random Numbers is\t" + random + "\tHead";
+    </script>
+</body>
+
+</html>
