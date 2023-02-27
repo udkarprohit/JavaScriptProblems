@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Selection Practice Problems with if else if and else</title>
+</head>
+
+<body>
+    <center>
+        <h1>Selection Practice Problems with if else if and else</h1>
+        <p id="output"></p>
+    </center>
+    <script>
+        // get the year from user input
+        const singleDigit = parseInt(prompt("Enter a Singe Digit b/w 1 to 7 : "));
+
+        if (singleDigit === 1) {
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Monday";
+        }else if(singleDigit === 2){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Tuesday";
+        }else if(singleDigit === 3){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Wednesday";
+        }else if(singleDigit === 4){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Thursday";
+        }else if(singleDigit === 5){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Friday";
+        }else if(singleDigit === 6){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Saturday";
+        }else if(singleDigit === 7){
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Sunday";
+        }else{
+            const outputElement = document.getElementById("output");
+            outputElement.textContent = "Read the prompt message first";
+        }
+        // const outputElement = document.getElementById("output");
+        // outputElement.textContent = "The Random Numbers is\t" + random + "\tHead";
+    </script>
+</body>
+
+</html>
