@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Array Practice Problems</title>
+</head>
+<body>
+	<h1>Array Practice Problems</h1>
+	<p id="randomNumbers"></p>
+	<p>Second Largest : <span id="secondLargest"></span></p>
+	<p>Second Smallest : <span id="secondSmallest"></span></p>
+
+	<script>
+		// Step 1: Generate 10 random 3-digit numbers
+		const getRandomNumber = () => {
+			return Math.floor(Math.random() * (999 - 100 + 1) + 100);
+		};
+
+		const randomNumbers = [];
+		for (let i = 0; i < 10; i++) {
+			randomNumbers.push(getRandomNumber());
+		}
+
+		// Step 2: Find the 2nd largest and 2nd smallest elements
+		let largest = randomNumbers[0];
+		let secondLargest = randomNumbers[0];
+		let smallest = randomNumbers[0];
+		let secondSmallest = randomNumbers[0];
+
+		for (let i = 1; i < randomNumbers.length; i++) {
+			if (randomNumbers[i] > largest) {
+				secondLargest = largest;
+				largest = randomNumbers[i];
+			} else if (randomNumbers[i] > secondLargest && randomNumbers[i] !== largest) {
+				secondLargest = randomNumbers[i];
+			}
+
+			if (randomNumbers[i] < smallest) {
+				secondSmallest = smallest;
+				smallest = randomNumbers[i];
+			} else if (randomNumbers[i] < secondSmallest && randomNumbers[i] !== smallest) {
+				secondSmallest = randomNumbers[i];
+			}
+		}
+
+		// Step 3: Display the results on the HTML page
+		const randomNumbersElement = document.getElementById("randomNumbers");
+		randomNumbersElement.textContent = `Random Numbers: ${randomNumbers.join(", ")}`;
+
+		const secondLargestElement = document.getElementById("secondLargest");
+		secondLargestElement.textContent = secondLargest;
+
+		const secondSmallestElement = document.getElementById("secondSmallest");
+		secondSmallestElement.textContent = secondSmallest;
+	</script>
+</body>
+</html>
